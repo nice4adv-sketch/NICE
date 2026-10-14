@@ -1,0 +1,20 @@
+{
+  "name": "nice-os",
+  "version": "5.0.0-supabase",
+  "private": true,
+  "description": "Nice OS + Nice Studio Vercel/Supabase PostgreSQL/Supabase Storage",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js && node --check nice-studio/studio-api.js && node --check api/index.js",
+    "test": "node tests/adapter-mocks.cjs && node tests/smoke-local.mjs"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "dependencies": {
+    "pg": "^8.16.3",
+    "@supabase/supabase-js": "^2.58.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "framework": null,
+  "functions": {
+    "api/index.js": { "maxDuration": 60 }
+  },
+  "rewrites": [
+    { "source": "/admin", "destination": "/admin.html" },
+    { "source": "/api/:path*", "destination": "/api/index?__nice_kind=api&__nice_path=:path*" },
+    { "source": "/private-media/:path*", "destination": "/api/index?__nice_kind=private&__nice_path=:path*" }
+  ]
+}

@@ -1,0 +1,38 @@
+/* Additional sections created with Nice Studio. These rules are scoped and do not replace the original Nice OS theme. */
+.studio-custom{padding:68px 0;background:var(--surface,#fff);color:var(--text,#172033)}
+.studio-custom .wrap{max-width:var(--ns-wide,1160px);width:calc(100% - 36px);margin:auto;display:grid;gap:12px}
+.studio-custom .eyebrow{color:var(--accent,#e9b649);font-size:12px;font-weight:900;letter-spacing:1px}
+.studio-custom h2{font-size:clamp(28px,4vw,45px);line-height:1.3;margin:5px 0}
+.studio-custom p{color:var(--muted,#667085);line-height:1.85;margin:0 0 12px}
+.studio-custom .custom-actions{display:flex;gap:8px}
+.studio-custom .action.primary{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;background:var(--primary,#171d2d);color:#fff;border-radius:var(--radius,14px);text-decoration:none;font-weight:900}
+.studio-custom.split .wrap{grid-template-columns:1fr 1fr;align-items:center;gap:24px}
+.studio-custom .custom-media{aspect-ratio:4/3;width:100%;object-fit:cover;border-radius:var(--radius,18px);background:#e4e8ef}
+.studio-custom.cta{background:var(--primary,#171d2d);color:#fff}.studio-custom.cta p{color:#ffffffbe}
+.studio-custom.testimonial{background:color-mix(in srgb,var(--accent,#e9b649) 13%,white)}
+.studio-custom .quote-mark{font-size:70px;line-height:1;color:var(--accent,#e9b649)}
+.studio-custom .faq-row{padding:14px 0;border-bottom:1px solid #e5e7eb}.studio-custom .faq-row summary{font-weight:800;cursor:pointer}
+.studio-selected{outline:3px solid #e9b649!important;outline-offset:-3px}.studio-hover{outline:2px dashed #e9b649;outline-offset:-2px;cursor:pointer}
+.studio-hero-picture{background-image:linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,.32)),var(--studio-hero-image)!important;background-size:cover!important;background-position:center!important}
+.studio-hero-picture h1,.studio-hero-picture p,.studio-hero-picture .eyebrow,.studio-hero-picture .trust{color:#fff!important}
+@media(max-width:620px){.studio-custom{padding:45px 0}.studio-custom.split .wrap{grid-template-columns:1fr}}
+
+/* Responsive per-section card grid authored in Nice Studio.
+   Before the first publish, reproduce Nice OS's existing columns and spacing. */
+#productsGrid{--studio-cols-desktop:3;--studio-cols-tablet:2;--studio-cols-mobile:2;--studio-card-gap:22px}
+#boxesGrid{--studio-cols-desktop:3;--studio-cols-tablet:2;--studio-cols-mobile:1;--studio-card-gap:20px}
+#servicesGrid{--studio-cols-desktop:3;--studio-cols-tablet:2;--studio-cols-mobile:1;--studio-card-gap:18px}
+#portfolioGrid{--studio-cols-desktop:3;--studio-cols-tablet:2;--studio-cols-mobile:2;--studio-card-gap:14px}
+#quoteProductsPicker{--studio-cols-desktop:2;--studio-cols-tablet:1;--studio-cols-mobile:1;--studio-card-gap:12px}
+
+#productsGrid,#boxesGrid,#servicesGrid,#portfolioGrid,#quoteProductsPicker{
+  grid-template-columns:repeat(var(--studio-cols-desktop,3),minmax(0,1fr))!important;
+  gap:var(--studio-card-gap,18px)!important;
+}
+@media(max-width:900px){
+ #productsGrid,#boxesGrid,#servicesGrid,#portfolioGrid,#quoteProductsPicker{grid-template-columns:repeat(var(--studio-cols-tablet,2),minmax(0,1fr))!important;}
+}
+@media(max-width:600px){
+ #productsGrid,#boxesGrid,#servicesGrid,#portfolioGrid,#quoteProductsPicker{grid-template-columns:repeat(var(--studio-cols-mobile,1),minmax(0,1fr))!important;}
+}
+#productsGrid>*,#boxesGrid>*,#servicesGrid>*,#portfolioGrid>*,#quoteProductsPicker>*{min-width:0;}

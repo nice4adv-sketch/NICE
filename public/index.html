@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="نايس للدعاية والإعلان - منتجات وخدمات وصناديق تجميع وعروض أسعار." />
+  <meta name="theme-color" content="#111827" />
+  <title>نايس للدعاية والإعلان</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/studio-widgets.css">
+</head>
+<body>
+  <header class="nav-wrap">
+    <nav class="container nav">
+      <a class="brand" href="#top"><span id="logoMark" class="logo-mark">N</span><span><strong id="brandName">نايس للدعاية والإعلان</strong><small id="brandEn">Nice for Advertising</small></span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#products">المنتجات</a><a href="#quote-request">طلب عرض سعر</a><a href="#boxes">صناديق التجميع</a><a href="#services">خدماتنا</a><a href="#portfolio">أعمالنا</a><a href="#about">من نحن</a><a href="#track">تتبع طلبك</a>
+        <a class="btn btn-small" href="#products">ابدأ طلبك</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">NICE • ADVERTISING & PRINTING</span>
+          <h1 id="heroTitle">كل احتياج إعلانك <em>في مكان واحد</em></h1>
+          <p id="heroSubtitle">منتجات، طلبات مخصصة، صناديق تجميع وعروض أسعار في منصة واحدة.</p>
+          <div class="hero-actions"><a class="btn" href="#products">استعرض المنتجات</a><a class="btn ghost" href="#quote-request">اطلب عرض سعر</a><a class="btn ghost" href="#portfolio">شاهد أعمالنا</a></div>
+          <div class="trust-row"><span>✓ طلب مخصص</span><span>✓ عرض سعر</span><span>✓ تتبع الطلب</span></div>
+        </div>
+        <div class="hero-card">
+          <div class="mock-head"><span></span><span></span><span></span></div>
+          <div class="mock-body"><small>منصة نايس الجديدة</small><h3>اطلب بالطريقة المناسبة لاحتياجك</h3><div class="os-flow"><span>اختر</span><i>←</i><span>خصص</span><i>←</i><span>استلم عرضك</span></div><div class="mock-stats"><div><b>منتجات</b><small>مرنة</small></div><div><b>طلبات</b><small>مخصصة</small></div><div><b>B2B</b><small>للشركات</small></div></div><button class="btn full" onclick="document.querySelector('#products').scrollIntoView({behavior:'smooth'})">ابدأ الآن</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="quote-request" class="section quote-request-section"><div class="container"><div class="quote-request-head"><div><span class="eyebrow">NICE QUOTE</span><h2>تحتاج أكثر من منتج؟ اطلب عرض سعر</h2><p>أدخل بيانات منشأتك، اختر المنتجات والكميات التقريبية، وستظهر لك قيمة مبدئية قبل إرسال الطلب.</p></div><div class="quote-benefit"><b id="quoteDiscountRange">خصم تفاوضي يصل إلى 5% – 20%</b><small>النسبة النهائية يحددها العرض والتفاوض حسب الكمية والتعاقد.</small></div></div><div class="quote-stepper"><span class="active" data-quote-step-indicator="1">1. بياناتك</span><i>←</i><span data-quote-step-indicator="2">2. المنتجات</span><i>←</i><span data-quote-step-indicator="3">3. المراجعة</span></div><form id="quoteRequestForm" class="quote-request-card"><div class="quote-step" data-quote-step="1"><div id="quoteDynamicFields" class="form-grid"></div><div class="quote-form-actions"><button type="button" class="btn" id="quoteNext1">التالي: اختر المنتجات</button></div></div><div class="quote-step hidden" data-quote-step="2"><div id="quoteProductsPicker" class="quote-products-picker"></div><div class="quote-form-actions"><button type="button" class="btn ghost" id="quoteBack2">رجوع</button><button type="button" class="btn" id="quoteNext2">التالي: مراجعة</button></div></div><div class="quote-step hidden" data-quote-step="3"><div id="quoteReview" class="quote-review"></div><div class="quote-form-actions"><button type="button" class="btn ghost" id="quoteBack3">رجوع</button><button type="submit" class="btn">إرسال طلب عرض السعر</button></div></div></form></div></section><section id="products" class="section product-section"><div class="container">
+      <div class="section-head"><div><span class="eyebrow">NICE CATALOG</span><h2>منتجات وحلول نايس</h2><p>اختر المنتج ثم أرسل المقاس والمواصفات والملف. بعض المنتجات بسعر مباشر، والبعض نحسبه حسب طلبك.</p></div><span class="pill">كتالوج ذكي</span></div>
+      <div id="categoryChips" class="category-chips"></div>
+      <div id="productsGrid" class="product-grid"><div class="loading">جاري تحميل المنتجات...</div></div>
+    </div></section>
+
+    <section id="boxes" class="section soft"><div class="container"><div class="section-head"><div><span class="eyebrow">GROUP ORDERS</span><h2>صناديق التجميع</h2><p>شارك الحد الأدنى للطباعة مع مشاريع أخرى وخذ الكمية التي تناسب ميزانيتك.</p></div><span class="pill">محدّث تلقائيًا</span></div><div id="boxesGrid" class="cards-grid"><div class="loading">جاري تحميل الصناديق...</div></div></div></section>
+    <section id="services" class="section"><div class="container"><div class="section-head"><div><span class="eyebrow">WHAT WE DO</span><h2>خدمات نايس</h2><p>تنفيذ متكامل للدعاية والطباعة والهوية.</p></div></div><div id="servicesGrid" class="service-grid"></div></div></section>
+    <section id="portfolio" class="section dark"><div class="container"><div class="section-head light"><div><span class="eyebrow">OUR WORK</span><h2>من أعمالنا</h2><p>اضغط على أي عمل لتكبيره أو لطلب شيء مشابه مباشرة عبر واتساب.</p></div></div><div id="portfolioGrid" class="portfolio-grid"></div></div></section>
+    <section id="about" class="section"><div class="container about-grid"><div><span class="eyebrow">ABOUT NICE</span><h2>شريك تنفيذ، وليس مجرد مطبعة</h2><p id="aboutText"></p><div class="about-points"><span>لوحات وواجهات</span><span>طباعة UV</span><span>قص ليزر</span><span>أختام</span><span>هدايا دعائية</span><span>مطبوعات</span></div></div><div class="contact-card"><small>تواصل معنا</small><h3 id="contactPhone">775577562</h3><p id="contactAddress">صنعاء - اليمن</p><div class="stack"><a id="waBtn" class="btn full" href="#">واتساب</a><a id="fbBtn" class="btn ghost full" href="#" target="_blank" rel="noopener">فيسبوك</a></div></div></div></section>
+    <section id="track" class="section soft"><div class="container track-wrap"><div><span class="eyebrow">ORDER TRACKING</span><h2>تابع طلبك</h2><p>رقم الطلب يعمل لصناديق التجميع وطلبات المنتجات.</p></div><form id="trackForm" class="track-form"><input id="trackCode" placeholder="NC / NP-XXXX" required><input id="trackPhone" placeholder="رقم الهاتف" required><button class="btn" type="submit">عرض الحالة</button></form><div id="trackResult"></div></div></section>
+  </main>
+
+  <nav class="mobile-dock" aria-label="التنقل السريع"><a href="#top"><span>⌂</span><small>الرئيسية</small></a><a href="#products"><span>▦</span><small>المنتجات</small></a><a href="#quote-request"><span>⌁</span><small>عرض سعر</small></a><a href="#boxes"><span>◫</span><small>التجميع</small></a><a id="mobileWhatsApp" href="#"><span>◉</span><small>واتساب</small></a></nav>
+  <footer><div class="container footer"><div class="brand"><span class="logo-mark">N</span><span><strong>نايس للدعاية والإعلان</strong><small>Nice for Advertising</small></span></div><p>جميع الحقوق محفوظة © <span id="year"></span></p><a href="/admin">لوحة الإدارة</a></div></footer>
+
+  <dialog id="productModal" class="modal"><form id="productForm" class="modal-card product-order-card">
+    <button type="button" class="close" id="closeProductModal">×</button><div class="modal-head"><span class="eyebrow">NICE ORDER</span><h2 id="productModalTitle">طلب منتج</h2><p id="productModalDesc"></p></div>
+    <input type="hidden" id="productId"><div class="form-grid"><label>الاسم الكامل<input id="productCustomerName" required></label><label>اسم المتجر / الشركة<input id="productBusinessName"></label><label>رقم الهاتف<input id="productPhone" inputmode="tel" required></label><label>الكمية<input id="productQuantity" type="number" min="1" value="1" required></label></div>
+    <div id="productOptions" class="dynamic-options"></div>
+    <label>ملف أو صورة تساعدنا نفهم المطلوب (اختياري)<input id="productFile" type="file" accept="image/png,image/jpeg,image/webp"></label>
+    <label>تفاصيل إضافية<textarea id="productNote" rows="3" placeholder="اكتب كل التفاصيل التي تهمك..."></textarea></label>
+    <div id="productPaymentBlock" class="payment-block hidden"><h3>الدفع</h3><select id="productPaymentMethod"><option value="">اختر وسيلة الدفع</option></select><div id="productPaymentDetails" class="payment-details hidden"></div><label>صورة إشعار التحويل<input id="productPaymentProof" type="file" accept="image/png,image/jpeg,image/webp"></label></div>
+    <div id="productPriceSummary" class="summary"></div><button id="submitProductRequest" class="btn full" type="submit">إرسال الطلب</button><p class="fine" id="productFine">إذا كان المنتج يحتاج تسعيرًا، ستراجعه نايس وتجهز لك عرض سعر.</p>
+  </form></dialog>
+
+  <dialog id="orderModal" class="modal"><form id="orderForm" class="modal-card"><button type="button" class="close" id="closeModal">×</button><div class="modal-head"><span class="eyebrow">BOOK YOUR SHARE</span><h2 id="modalTitle">حجز صندوق</h2><p id="modalRemaining"></p></div><input type="hidden" id="boxId"><div class="form-grid"><label>الاسم الكامل<input id="customerName" required></label><label>اسم المتجر / المشروع<input id="shopName"></label><label>رقم الهاتف<input id="phone" inputmode="tel" required></label><label>الكمية المطلوبة<input id="quantity" type="number" min="1" required></label></div><label>شعار المشروع (اختياري)<input id="customerLogo" type="file" accept="image/png,image/jpeg,image/webp"></label><label>ملاحظات<textarea id="note" rows="3" placeholder="لون، مقاس، تفاصيل إضافية..."></textarea></label><div class="payment-block"><h3>طريقة الدفع</h3><select id="paymentMethod" required><option value="">اختر وسيلة الدفع</option></select><div id="paymentDetails" class="payment-details hidden"></div></div><label>صورة إشعار التحويل<input id="paymentProof" type="file" accept="image/png,image/jpeg,image/webp" required></label><div id="priceSummary" class="summary"></div><button id="submitOrder" class="btn full" type="submit">تأكيد الحجز وإرسال الطلب</button><p class="fine">لن يتم اعتماد الدفع نهائيًا إلا بعد مراجعته من إدارة نايس.</p></form></dialog>
+
+  <dialog id="orderSuccess" class="success-dialog"><div class="success-card"><div class="success-icon">✓</div><span class="eyebrow">REQUEST RECEIVED</span><h2>تم استلام طلبك</h2><p id="successText">احتفظ برقم الطلب حتى تستطيع متابعة حالته في أي وقت.</p><button type="button" id="copyOrderCode" class="order-code"><b id="successCode"></b><small>اضغط لنسخ رقم الطلب</small></button><div class="success-actions"><button type="button" id="successTrack" class="btn">تتبع الطلب</button><button type="button" id="closeSuccess" class="btn ghost">إغلاق</button></div></div></dialog>
+  <dialog id="galleryLightbox" class="gallery-lightbox"><div class="lightbox-card"><button type="button" class="lightbox-close" id="closeLightbox">×</button><div class="lightbox-image-wrap"><img id="lightboxImage" alt=""></div><div class="lightbox-meta"><div><b id="lightboxTitle"></b><small id="lightboxCategory"></small></div><a id="lightboxWhatsapp" class="btn whatsapp-btn" href="#" target="_blank" rel="noopener">أريد مثل هذا على واتساب</a></div></div></dialog>
+  <div id="toast" class="toast"></div><script src="/app.js"></script>
+  <script src="/studio-runtime.js"></script>
+</body></html>

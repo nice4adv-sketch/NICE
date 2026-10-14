@@ -1,0 +1,10 @@
+const fs=require('fs');const path=require('path');
+const {convertDDL}=require('./db-compat');
+const app=fs.readFileSync('server.js','utf8');
+const main=app.match(/await db\.exec\(`([\s\S]*?)`\)\);/);
+if(!main)throw Error('schema not found');
+const studio=fs.readFileSync('nice-studio/studio-api.js','utf8');
+const sm=studio.match(/await db\.exec\(`([\s\S]*?)`\)\);/);
+if(!sm)throw Error('studio schema not found');
+const sql=`-- Optional Supabase initialization. Run in SQL Editor as project owner.\n-- The app also creates these tables automatically at initial connection.\nBEGIN;\n${convertDDL(main[1])}\n${convertDDL(sm[1])}\n${['settings','admins','services','boxes','payment_methods','portfolio','orders','customers','product_categories','products','product_requests','quotes','quote_items','quote_form_fields','quote_requests','business_accounts','studio_state','studio_template','studio_revisions'].map(x=>`ALTER TABLE public.${x} ENABLE ROW LEVEL SECURITY;`).join('\n')}\nCOMMIT;\n`;
+fs.writeFileSync('supabase/schema.sql',sql);
